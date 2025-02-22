@@ -1,8 +1,8 @@
 <script setup lang="ts">
 definePageMeta({
-  layout: "page-default",
-});
+    layout: 'app-default',
+})
 </script>
 <template>
-  <NuxtLayout> </NuxtLayout>
+    <span>app</span>
 </template>

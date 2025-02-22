@@ -4,5 +4,5 @@ definePageMeta({
 })
 </script>
 <template>
-    <NuxtLayout> </NuxtLayout>
+    <span>test</span>
 </template>
