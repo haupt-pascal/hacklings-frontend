@@ -1,6 +1,5 @@
 <script setup lang="ts">
-const firstName = ref("");
-const lastName = ref("");
+const full_name = ref("");
 const email = ref("");
 const password = ref("");
 const confirmPassword = ref("");
@@ -37,9 +36,10 @@ const registerWithEmail = async () => {
     return;
   }
 
-  /*
   const { data, error } = await client.auth.signUp({
+    /*
      * This logic needs to be implemented!!
+     */
   });
 
   if (error) {
@@ -47,7 +47,6 @@ const registerWithEmail = async () => {
     showError(error.message);
     return;
   }
-     */
 
   navigateTo("/auth/pending");
 };
@@ -55,35 +54,21 @@ const registerWithEmail = async () => {
 
 <template>
   <div class="min-h-screen bg-base-200 flex items-center justify-center p-4">
-    <div class="card w-full max-w-lg shadow-2xl bg-base-100 mx-auto">
+    <div class="card w-full max-w-md shadow-2xl bg-base-100 mx-auto">
       <div class="card-body">
         <h1 class="text-3xl font-bold text-center mb-6">Account erstellen</h1>
 
-        <!-- Name Inputs -->
-        <div class="flex gap-4">
-          <div class="form-control flex-1">
-            <label class="label">
-              <span class="label-text">Vorname</span>
-            </label>
-            <input
-              type="text"
-              v-model="firstName"
-              placeholder="Max"
-              class="input input-bordered"
-            />
-          </div>
-
-          <div class="form-control flex-1">
-            <label class="label">
-              <span class="label-text">Nachname</span>
-            </label>
-            <input
-              type="text"
-              v-model="lastName"
-              placeholder="Mustermann"
-              class="input input-bordered"
-            />
-          </div>
+        <!-- Username Input -->
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text">Voller Name</span>
+          </label>
+          <input
+            type="text"
+            v-model="fullName"
+            placeholder="Max Mustermann"
+            class="input input-bordered"
+          />
         </div>
 
         <!-- Email Input -->
