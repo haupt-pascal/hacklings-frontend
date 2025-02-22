@@ -1,3 +1,8 @@
+<script setup lang="ts">
+definePageMeta({
+  layout: "page-default",
+});
+</script>
 <template>
-  <AppNavigation />
+  <NuxtLayout> </NuxtLayout>
 </template>
