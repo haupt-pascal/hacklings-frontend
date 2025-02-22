@@ -27,12 +27,6 @@ const footerLinks = [
         ],
     },
 ]
-
-const socialLinks = [
-    { icon: 'fa-github', url: 'https://github.com', label: 'GitHub' },
-    { icon: 'fa-twitter', url: 'https://twitter.com', label: 'Twitter' },
-    { icon: 'fa-linkedin', url: 'https://linkedin.com', label: 'LinkedIn' },
-]
 </script>
 
 <template>
@@ -59,23 +53,6 @@ const socialLinks = [
                         {{ item.label }}
                     </NuxtLink>
                 </div>
-            </div>
-        </div>
-
-        <!-- Social Links -->
-        <div>
-            <div class="grid grid-flow-col gap-4">
-                <a
-                    v-for="social in socialLinks"
-                    :key="social.label"
-                    :href="social.url"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="btn btn-ghost btn-square hover:text-primary transition-colors"
-                    :aria-label="social.label"
-                >
-                    <i :class="['fas', social.icon, 'text-xl']"></i>
-                </a>
             </div>
         </div>
 
