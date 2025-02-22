@@ -35,9 +35,29 @@ export const useToast = () => {
     }
   };
 
+  const success = (message: string, title?: string, duration?: number) => {
+    addToast({ message, title, type: "success", duration });
+  };
+
+  const error = (message: string, title?: string, duration?: number) => {
+    addToast({ message, title, type: "error", duration });
+  };
+
+  const info = (message: string, title?: string, duration?: number) => {
+    addToast({ message, title, type: "info", duration });
+  };
+
+  const warning = (message: string, title?: string, duration?: number) => {
+    addToast({ message, title, type: "warning", duration });
+  };
+
   return {
     toasts,
     addToast,
     removeToast,
+    success,
+    error,
+    info,
+    warning,
   };
 };
