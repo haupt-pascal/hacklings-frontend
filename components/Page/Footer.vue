@@ -31,7 +31,7 @@ const footerLinks = [
 
 <template>
     <footer
-        class="footer footer-center p-10 bg-base-100 text-base-content rounded-xl shadow-lg mt-12"
+        class="footer footer-center p-10 bg-base-100 text-base-content rounded-xl mt-12"
     >
         <!-- Links Section -->
         <div class="grid grid-flow-col gap-12">

@@ -4,5 +4,7 @@ definePageMeta({
 })
 </script>
 <template>
-    <span>test</span>
+    <div class="min-h-screen">
+        <PageTraining />
+    </div>
 </template>

@@ -1,38 +1,38 @@
 <script setup lang="ts">
-import { ref } from "vue";
-import { useRoute } from "vue-router";
+import { ref } from 'vue'
+import { useRoute } from 'vue-router'
 
-const route = useRoute();
+const route = useRoute()
 
-const isAdmin = ref(true);
+const isAdmin = ref(true)
 
 const navigationItems = ref<
     Array<{
-        title: string;
-        url: string;
-        icon: string;
-        visible?: () => boolean;
-        isLogout?: true;
+        title: string
+        url: string
+        icon: string
+        visible?: () => boolean
+        isLogout?: true
     }>
 >([
-    { title: "Kalender", url: "/app/calendar", icon: "fa-calendar-alt" },
-    { title: "Profil", url: "/app/profile", icon: "fa-user" },
+    { title: 'Kalender', url: '/app/calendar', icon: 'fa-calendar-alt' },
+    { title: 'Profil', url: '/app/profile', icon: 'fa-user' },
     {
-        title: "Events",
-        url: "/app/events",
-        icon: "fa6-solid-calendar",
+        title: 'Events',
+        url: '/app/events',
+        icon: 'fa6-solid-calendar',
         visible: () => isAdmin.value,
     },
     {
-        title: "Logout",
-        url: "/auth/logout",
-        icon: "fa-sign-out-alt",
+        title: 'Logout',
+        url: '/auth/logout',
+        icon: 'fa-sign-out-alt',
         isLogout: true,
     },
-]);
+])
 </script>
 <template>
-    <div class="navbar bg-base-100 shadow-lg px-4 rounded-xl mb-12">
+    <div class="navbar bg-base-100 px-4 rounded-xl mb-12">
         <div class="navbar-start">
             <NuxtLink
                 to="/"
